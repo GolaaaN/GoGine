@@ -6,6 +6,7 @@ namespace GOG {
 	class GOG_API Application
 	{
 	public:
+
 		Application() = default;
 		
 		virtual ~Application() = default;

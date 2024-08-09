@@ -1,10 +1,15 @@
 #pragma once
 
-#include "Application.h"
+
 
 extern GOG::Application* GOG::CreateApplication();
 
 int main(int argc, char** argv) {
+
+	GOG::Logger::Init();
+	GOG::Logger::GetClientLogger()->debug("hi");
+
+
 	auto app = GOG::CreateApplication();
 
 	app->run();
