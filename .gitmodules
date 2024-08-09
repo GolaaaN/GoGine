@@ -1,0 +1,3 @@
+[submodule "GoGine/GoGine/vendor/spdlog"]
+	path = GoGine/GoGine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
