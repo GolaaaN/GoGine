@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "Event.h"
+#include "../Events/Event.h"
 #include <functional>
 
 namespace GOG {
