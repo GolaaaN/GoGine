@@ -7,7 +7,7 @@ namespace GOG {
 
 	enum class EventType {
 		None = 0,
-		WindowsClose
+		WindowClose
 	};
 
 	class Event {
