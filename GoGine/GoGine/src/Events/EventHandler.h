@@ -20,7 +20,7 @@ public:
 	virtual EventType GetEventType() const = 0;
 	
 private:
-	virtual void Call(const Event& e) = 0;
+	virtual bool Call(const Event& e) = 0;
 };
 
 template<typename EventType>
@@ -34,10 +34,12 @@ public:
 	}
 
 private:
-	void Call(const Event& e) override {
-		if (e.GetEventType() == EventType::GetStaticEventType()) {
+	bool Call(const Event& e) override {
+		if (e.GetEventType() == EventType::GetStaticType()) {
 			m_event_handler(static_cast<const EventType&>(e));
+			return true;
 		}
+		return false;
 	}
 	
 private:
