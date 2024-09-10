@@ -5,12 +5,14 @@
 #include "spdlog/spdlog.h"
 
 
-
 namespace GOG {
 	
 	class GOG_API Logger
 	{
 	public:
+		/*
+		* This function initializes the logger
+		*/
 		static void Init();
 
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
