@@ -24,10 +24,10 @@ private:
 };
 
 template<typename EventType>
-class EventHandlerWrapper : public : IEventHandler{
+class EventHandlerWrapper : public IEventHandlerWrapper {
 	
 public:
-	explicit EventHandlerWrapper(const EventHandler<EventType> event_handler) : m_event_handler(e_handler) {}
+	explicit EventHandlerWrapper(const EventHandler<EventType> event_handler) : m_event_handler(event_handler) {}
 		
 	EventType GetEventType() const override {
 		return m_event_handler.target_type();
@@ -35,7 +35,7 @@ public:
 
 private:
 	bool Call(const Event& e) override {
-		if (e.GetEventType() == EventType::GetStaticType()) {
+		if (e.GetEventType() == EventType::GetEventType()) {
 			m_event_handler(static_cast<const EventType&>(e));
 			return true;
 		}

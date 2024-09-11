@@ -10,6 +10,7 @@ namespace GOG {
 	{
 	public:
 
+
 	private:
 		std::vector<std::unique_ptr<Event>> m_events_queue;
 		std::unordered_map<EventType, std::vector<std::unique_ptr<IEventHandlerWrapper>>> m_subscribers;

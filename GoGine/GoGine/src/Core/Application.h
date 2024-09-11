@@ -1,5 +1,6 @@
 #pragma once
 #include "Core.h"
+#include "EventManager.h"
 
 namespace GOG {
 
@@ -12,7 +13,6 @@ namespace GOG {
 		virtual ~Application() = default;
 
 		void run();
-
 	};
 
 	Application* CreateApplication();

@@ -19,6 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Core\EventHandler.h" />
+    <ClInclude Include="src\Core\EventManager.h" />
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Events\Windows.h" />
     <ClInclude Include="src\Logger\Logger.h" />
     <ClInclude Include="src\Core\Application.h" />
     <ClInclude Include="src\Core\Core.h" />
@@ -26,6 +30,7 @@
     <ClInclude Include="src\GoGine.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\EventManager.cpp" />
     <ClCompile Include="src\Logger\Logger.cpp" />
     <ClCompile Include="src\Core\Application.cpp" />
   </ItemGroup>
