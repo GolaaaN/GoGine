@@ -9,10 +9,7 @@ int main(int argc, char** argv) {
 	GOG::Logger::Init();
 	GOG::Logger::GetClientLogger()->debug("hi");
 
+	std::unique_ptr<GOG::Application*> app = std::make_unique<GOG::Application*>(GOG::CreateApplication());
 
-	auto app = GOG::CreateApplication();
-
-	app->run();
-	
-	delete app; //Todo: use RAII instead of this implementation.
+	(*app)->run();
 }
